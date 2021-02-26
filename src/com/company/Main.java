@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 	    Animal dog = new Animal();
-	    dog.name = "Haiku";
-	    dog.weight = 9.0;
+	    dog.name = "Graf";
+	    dog.weight = 20.0;
 	    dog.species = "dog";
 	    dog.feed();
 
@@ -14,5 +14,12 @@ public class Main {
 	    tel.producer = "Xiaomi";
 	    tel.model = "Redmi 8T";
 	    tel.operationSystem = "Android";
+
+	    Human me = new Human();
+	    me.firstName = "Evgenii";
+	    me.lastName = "Rezuev";
+	    me.pet = dog;
+
+	    System.out.println("Zwierzak nazywa się :" + me.pet.name);
     }
 }
