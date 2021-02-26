@@ -3,17 +3,11 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	    Animal dog = new Animal();
-	    dog.name = "Graf";
-	    dog.weight = 20.0;
-	    dog.species = "dog";
+	    Animal dog = new Animal("dog", 20.0, "Graf");
+
 	    dog.feed();
 
-	    Phone tel = new Phone();
-	    tel.screenSize = 4.5;
-	    tel.producer = "Xiaomi";
-	    tel.model = "Redmi 8T";
-	    tel.operationSystem = "Android";
+	    Phone tel = new Phone("Xiaomi", "Redmi 8T", 5.5, "Android");
 
 	    Human me = new Human();
 	    me.firstName = "Evgenii";
