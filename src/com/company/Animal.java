@@ -18,4 +18,13 @@ public class Animal {
         weight += 1;
         System.out.println("Thx for food");
     }
+
+    void takeForAWalk(){
+        weight -= 1;
+        if(weight > 0) {
+            System.out.println("I love going for a walk!");
+        }else{
+            System.out.println("Your pet is dead already. You don't want to drag the corpse with you, right?");
+        }
+    }
 }
