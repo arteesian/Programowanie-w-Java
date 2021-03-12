@@ -19,8 +19,10 @@ public class Main {
 	    me.pet.takeForAWalk();
 		me.pet.takeForAWalk();
 		me.pet.takeForAWalk();
+		me.pet.feed();
 		me.pet.takeForAWalk();
 		me.pet.feed();
+		me.pet.takeForAWalk();
 		me.pet.takeForAWalk();
 		me.pet.takeForAWalk();
 		me.pet.takeForAWalk();
