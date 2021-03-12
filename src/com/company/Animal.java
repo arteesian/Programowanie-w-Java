@@ -16,7 +16,12 @@ public class Animal {
 
     void feed(){
         weight += 1;
-        System.out.println("Thx for food");
+        if(weight > 0) {
+            System.out.println("Thx for food");
+        }else{
+            System.out.println("Your pet is dead already. You don't want feed the corpse, right?");
+        }
+
     }
 
     void takeForAWalk(){
