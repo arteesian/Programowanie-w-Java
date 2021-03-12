@@ -6,4 +6,5 @@ public class Human {
     protected String phone;
     public Animal pet;
     public Car car;
+
 }

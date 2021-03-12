@@ -28,5 +28,8 @@ public class Main {
 		me.pet.takeForAWalk();
 
 	    System.out.println(me.pet);
+
+	    me.car = new Car("Honda", "Civic");
+
     }
 }
