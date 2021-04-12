@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.devices.Car;
+import com.company.devices.Phone;
+
 import java.io.File;
 
 public class Animal {
@@ -17,7 +20,7 @@ public class Animal {
     void feed(){
         weight += 1;
         if(weight > 0) {
-            System.out.println("Thx for food");
+            System.out.println("Thx for food. The current weight is " + weight);
         }else{
             System.out.println("Your pet is dead already. You don't want feed the corpse, right?");
         }
@@ -27,9 +30,14 @@ public class Animal {
     void takeForAWalk(){
         weight -= 1;
         if(weight > 0) {
-            System.out.println("I love going for a walk!");
+            System.out.println("I love going for a walk! The current weight is " + weight );
         }else{
             System.out.println("Your pet is dead already. You don't want to drag the corpse with you, right?");
         }
+    }
+
+    @Override
+    public String toString(){
+        return "Species: " + species + ", weight: " + weight + ", name: " + name;
     }
 }
