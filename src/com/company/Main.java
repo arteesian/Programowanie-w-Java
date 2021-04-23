@@ -50,8 +50,10 @@ public class Main {
 		System.out.println(me);
 		System.out.println(tel);
 
-		tel.turnOn();
 		System.out.println(tel.yearOfProduction);
+
+		tel.turnOn();
+		honda.turnOn();
 
     }
 }

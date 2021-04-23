@@ -9,6 +9,10 @@ public class Car extends Device {
     }
 
     @Override
+    public void turnOn(){
+        System.out.println("The car engine is on");
+    }
+
     public String toString(){
         return "Producer: " + producer + ", model: " + model + ", value: " + value;
     }

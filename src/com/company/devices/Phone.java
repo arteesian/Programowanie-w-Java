@@ -11,6 +11,10 @@ public class Phone extends Device {
     }
 
     @Override
+    public void turnOn(){
+        System.out.println("Put your finger to unlock");
+    }
+
     public String toString(){
         return "Producer: " + producer + ", model: " + model + ", screen size: " + screenSize + ", operation system: " + operationSystem;
     }
