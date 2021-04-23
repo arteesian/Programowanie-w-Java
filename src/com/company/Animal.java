@@ -5,7 +5,7 @@ import com.company.devices.Phone;
 
 import java.io.File;
 
-public class Animal {
+public class Animal implements Sellable{
     final String species;
     private Double weight;
     public String name;
@@ -39,5 +39,20 @@ public class Animal {
     @Override
     public String toString(){
         return "Species: " + species + ", weight: " + weight + ", name: " + name;
+    }
+
+    @Override
+    public void sell (Human seller, Human buyer, Double price){
+        if(seller.pet != this){
+            System.out.println("You can't sell what you don't own");
+        }else if(buyer.cash < price){
+            System.out.println("You can't afford this");
+        }else{
+            seller.cash += price;
+            buyer.cash -= price;
+            buyer.pet = seller.pet;
+            seller.pet = null;
+            System.out.println("Transaction was done successfully");
+        }
     }
 }

@@ -55,5 +55,22 @@ public class Main {
 		tel.turnOn();
 		honda.turnOn();
 
+		me.pet = new Animal("dog", 10.0, "Jack");
+		me.cash = 0.0;
+
+		Human bro =new Human();
+		bro.cash = 10000.0;
+
+		me.pet.sell(me, bro, 500.0);
+		System.out.println(me.cash);
+
+		me.car = new Car ("aaa", "bbb", 2000.0, 2000);
+		me.phone = new Phone ("ooo", "aaa", 5.0, "qqq", 2020);
+
+		me.car.sell(me, bro, 5000.0);
+		me.phone.sell(me, bro, 1000.0);
+
+		System.out.println(me.cash);
+
     }
 }

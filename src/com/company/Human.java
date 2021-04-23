@@ -6,10 +6,11 @@ import com.company.devices.Phone;
 public class Human {
     public String firstName;
     public String lastName;
-    protected String phone;
+    public Phone phone;
     public Animal pet;
-    private Car car;
+    public Car car;
     private Double salary;
+    public Double cash;
 
     public Double getSalary(){
         if(salary != null) {

@@ -1,6 +1,8 @@
 package com.company.devices;
 
-abstract public class Device {
+import com.company.Sellable;
+
+abstract public class Device implements Sellable {
     final public String producer;
     final public String model;
     final public Integer yearOfProduction;
@@ -11,7 +13,7 @@ abstract public class Device {
         this.yearOfProduction = yearOfProduction;
     }
 
-    abstract public void turnOn();
+    abstract void turnOn();
 
     @Override
     public String toString() {

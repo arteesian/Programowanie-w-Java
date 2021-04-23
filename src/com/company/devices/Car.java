@@ -1,5 +1,7 @@
 package com.company.devices;
 
+import com.company.Human;
+
 public class Car extends Device {
     public Double value;
 
@@ -15,5 +17,20 @@ public class Car extends Device {
 
     public String toString(){
         return "Producer: " + producer + ", model: " + model + ", value: " + value;
+    }
+
+    @Override
+    public void sell (Human seller, Human buyer, Double price) {
+        if (seller.car != this) {
+            System.out.println("You can't sell what you don't own");
+        } else if (buyer.cash < price) {
+            System.out.println("You can't afford this");
+        } else {
+            seller.cash += price;
+            buyer.cash -= price;
+            buyer.car = seller.car;
+            seller.pet = null;
+            System.out.println("Transaction was done successfully");
+        }
     }
 }
