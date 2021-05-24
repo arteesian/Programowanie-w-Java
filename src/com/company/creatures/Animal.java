@@ -1,11 +1,13 @@
-package com.company;
+package com.company.creatures;
 
+import com.company.Human;
+import com.company.Sellable;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
 import java.io.File;
 
-public class Animal implements Sellable{
+public abstract class Animal implements Feedable {
     final String species;
     private Double weight;
     public String name;
@@ -17,7 +19,7 @@ public class Animal implements Sellable{
         this.name = name;
     }
 
-    void feed(){
+    public void feed(){
         weight += 1;
         if(weight > 0) {
             System.out.println("Thx for food. The current weight is " + weight);
@@ -27,7 +29,7 @@ public class Animal implements Sellable{
 
     }
 
-    void takeForAWalk(){
+    public void takeForAWalk(){
         weight -= 1;
         if(weight > 0) {
             System.out.println("I love going for a walk! The current weight is " + weight );
@@ -41,7 +43,7 @@ public class Animal implements Sellable{
         return "Species: " + species + ", weight: " + weight + ", name: " + name;
     }
 
-    @Override
+    /* @Override
     public void sell (Human seller, Human buyer, Double price){
         if(seller.pet != this){
             System.out.println("You can't sell what you don't own");
@@ -52,7 +54,17 @@ public class Animal implements Sellable{
             buyer.cash -= price;
             buyer.pet = seller.pet;
             seller.pet = null;
-            System.out.println("Transaction was done successfully");
+            System.out.println("You have sold a pet.");
         }
+    }*/
+
+    @Override
+    public void feeed(Double weight){
+
+    }
+
+    @Override
+    public void feeed(){
+
     }
 }

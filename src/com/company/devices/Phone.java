@@ -6,10 +6,35 @@ public class Phone extends Device {
     final public Double screenSize;
     final public String operationSystem;
 
+    public String appname;
+    public Double version;
+    public String serverAddress;
+    public String[] applist;
+
+
     public Phone(String producer, String model, Double screenSize, String operationSystem, Integer yearOfProduction){
         super(producer, model, yearOfProduction);
         this.screenSize = screenSize;
         this.operationSystem = operationSystem;
+    }
+
+    public void installAnApp(String appname){
+        this.appname = appname;
+    }
+
+    public void installAnApp(String appname, Double version){
+        this.appname = appname;
+        this.version = version;
+    }
+
+    public void installAnApp(String appname, Double version, String serverAddress){
+        this.appname = appname;
+        this.version = version;
+        this.serverAddress = serverAddress;
+    }
+
+    public void installAnApp(String[] applist){
+        this.applist = applist;
     }
 
     @Override
@@ -31,8 +56,8 @@ public class Phone extends Device {
             seller.cash += price;
             buyer.cash -= price;
             buyer.phone = seller.phone;
-            seller.pet = null;
-            System.out.println("Transaction was done successfully");
+            seller.phone = null;
+            System.out.println("You have sold a phone.");
         }
     }
 }

@@ -2,13 +2,15 @@ package com.company.devices;
 
 import com.company.Human;
 
-public class Car extends Device {
+public abstract class Car extends Device {
     public Double value;
 
     public Car(String producer, String model, Double value, Integer yearOfProduction){
         super(producer, model, yearOfProduction);
         this.value = value;
     }
+
+    public abstract void refuel();
 
     @Override
     public void turnOn(){
